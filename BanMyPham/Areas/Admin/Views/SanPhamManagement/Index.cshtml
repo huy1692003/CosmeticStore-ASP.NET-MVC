@@ -1,0 +1,142 @@
+﻿@{
+    Layout = "~/Views/Shared/_layoutAdmin.cshtml";
+}
+@model IEnumerable<BanMyPham.Models.SanPham>
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4 class="mb-0">Quản lý sản phẩm</h4>
+
+        <!-- Thêm form để chọn số lượng sản phẩm mỗi trang -->
+       
+
+        <input type="text" id="searchInput" style="width: 300px;" class="form-control me-2" placeholder="Tìm kiếm sản phẩm...">
+        <a href="@Url.Action("Create", "SanPhamManagement", new { area = "Admin" })" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Thêm mới
+        </a>
+    </div>
+
+    <div>
+        <div>
+            <div>
+                <label for="pageSizeSelect">Số sản phẩm mỗi trang:</label>
+                <select id="pageSizeSelect" class="form-control" style="width: 150px;margin-bottom:5px">
+                    <option value="10" @(ViewBag.PageSize == 10 ? "selected" : "")>10</option>
+                    <option value="20" @(ViewBag.PageSize == 20 ? "selected" : "")>20</option>
+                    <option value="50" @(ViewBag.PageSize == 50 ? "selected" : "")>50</option>
+                    <option value="100" @(ViewBag.PageSize == 100 ? "selected" : "")>100</option>
+                </select>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="table-dark" style="border-radius: 10px;">
+                            <th scope="col" width="5%" style="border-top-left-radius: 5px;">Mã</th>
+                            <th scope="col" width="10%">Hình ảnh</th>
+                            <th scope="col" width="25%">Tên sản phẩm</th>
+                            <th scope="col" width="15%">Thương hiệu</th>
+                            <th scope="col" width="10%">Nguyên giá</th>
+                            <th scope="col" width="10%">Xuất xứ</th>
+                            <th scope="col" width="5%">Số lượng</th>
+                            <th scope="col" width="10%">Tình trạng</th>
+                            <th scope="col" width="10%" style="border-top-right-radius: 5px;">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTableBody">
+                        @foreach (var item in Model)
+                        {
+                            var thuongHieu = ((List<BanMyPham.Models.ThuongHieu>)ViewBag.ThuongHieu).FirstOrDefault(th => th.MaThuongHieu == item.MaThuongHieu);
+                            <tr>
+                                <td>@item.MaSanPham</td>
+                                <td> <img src="@Url.Content("~/" + item.HinhAnh)" alt="Hình ảnh sản phẩm" style="width: 100px; height: 100px;"></td>
+                                <td>@item.TenSanPham</td>
+                                <td>@(thuongHieu?.TenThuongHieu ?? item.MaThuongHieu)</td>
+                                <td>@item.NguyenGia?.ToString("#,##0") đ</td>
+                                <td>@item.XuatXu</td>
+                                <td>@item.SoLuong</td>
+                                <td>@(item.SoLuong > 10 ? "Còn hàng" : item.SoLuong > 1 ? "Sắp hết hàng" : "Hết hàng")</td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a href="@Url.Action("Edit", "SanPhamManagement", new { id = item.MaSanPham })"
+                                           class="btn btn-warning btn-sm" style="margin-right: 5px;">
+                                            Sửa
+                                        </a>
+                                        <a href="@Url.Action("Delete", "SanPhamManagement", new { id = item.MaSanPham })"
+                                           class="btn btn-danger btn-sm"
+                                           onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');">
+                                            Xóa
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Phân trang -->
+        <div class="d-flex justify-content-center">
+            <ul class="pagination">
+                @if (ViewBag.CurrentPage > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { pageNumber = 1, pageSize = ViewBag.PageSize })">Đầu</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { pageNumber = ViewBag.CurrentPage - 1, pageSize = ViewBag.PageSize })">Trước</a>
+                    </li>
+                }
+
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { pageNumber = i, pageSize = ViewBag.PageSize })">@i</a>
+                    </li>
+                }
+
+                @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { pageNumber = ViewBag.CurrentPage + 1, pageSize = ViewBag.PageSize })">Sau</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { pageNumber = ViewBag.TotalPages, pageSize = ViewBag.PageSize })">Cuối</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('searchInput').addEventListener('keyup', function() {
+        let searchText = this.value.toLowerCase();
+        let rows = document.getElementById('productTableBody').getElementsByTagName('tr');
+
+        for (let row of rows) {
+            let maSanPham = row.cells[0].textContent.toLowerCase();
+            let tenSanPham = row.cells[2].textContent.toLowerCase();
+            let thuongHieu = row.cells[3].textContent.toLowerCase();
+            let nguyenGia = row.cells[4].textContent.toLowerCase();
+            let xuatXu = row.cells[5].textContent.toLowerCase();
+
+            if (maSanPham.includes(searchText) ||
+                tenSanPham.includes(searchText) ||
+                thuongHieu.includes(searchText) ||
+                nguyenGia.includes(searchText) ||
+                xuatXu.includes(searchText)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        }
+    });
+
+    document.getElementById('pageSizeSelect').addEventListener('change', function() {
+        let pageSize = this.value;
+        let url = new URL(window.location.href);
+        url.searchParams.set('pageSize', pageSize);
+        window.location.href = url.toString();
+    });
+</script>

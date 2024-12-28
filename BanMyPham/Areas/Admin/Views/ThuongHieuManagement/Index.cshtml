@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "~/Views/Shared/_layoutAdmin.cshtml";
+}
+@model IEnumerable<BanMyPham.Models.ThuongHieu>
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4 class="mb-0">Quản lý thương hiệu</h4>
+      
+            <input type="text" id="searchInput" style="width: 300px;" class="form-control me-2" placeholder="Tìm kiếm thương hiệu...">
+            <a href="@Url.Action("Create", "ThuongHieuManagement" , new {area="Admin"})" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Thêm mới
+            </a>
+        
+    </div>
+
+    <div class="">
+        <div class="">
+            <div class="table-responsive">
+                <table  class="table table-hover ">
+                    <thead>
+                        <tr class="table-dark" style="border-radius: 10px;">
+                            <th scope="col" width="15%" style="border-top-left-radius: 5px;">Mã thương hiệu</th>
+                            <th scope="col" width="75%">Tên thương hiệu</th>
+                            <th scope="col" width="10%" style="border-top-right-radius: 5px;">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="brandTableBody">
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.MaThuongHieu</td>
+                                <td>@item.TenThuongHieu</td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a href="@Url.Action("Edit", "ThuongHieuManagement", new { id = item.MaThuongHieu })" 
+                                           class="btn btn-warning btn-sm " style="margin-right: 5px;">
+                                            Sửa
+                                        </a>
+                                        <a href="@Url.Action("Delete", "ThuongHieuManagement", new { id = item.MaThuongHieu })" 
+                                           class="btn btn-danger btn-sm"
+                                           onclick="return confirm('Bạn có chắc chắn muốn xóa thương hiệu này?');">
+                                            Xóa
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+document.getElementById('searchInput').addEventListener('keyup', function() {
+    let searchText = this.value.toLowerCase();
+    let rows = document.getElementById('brandTableBody').getElementsByTagName('tr');
+    
+    for (let row of rows) {
+        let maThuongHieu = row.cells[0].textContent.toLowerCase();
+        let tenThuongHieu = row.cells[1].textContent.toLowerCase();
+        
+        if (maThuongHieu.includes(searchText) || tenThuongHieu.includes(searchText)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    }
+});
+
+
+</script>

@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Câu hỏi thường gặp";
+}
+
+<div class="my-3 p-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Câu hỏi thường gặp</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <h3 class="text-center my-4" style="color: orange;">Câu hỏi thường gặp</h3>
+        <div class="accordion" id="faqAccordion">
+            <!-- Câu hỏi 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        1. Tôi có thể mua mỹ phẩm ở đâu?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                    <div class="accordion-body">
+                        Bạn có thể mua mỹ phẩm trực tiếp tại hệ thống cửa hàng của chúng tôi tại các thành phố lớn như Hà Nội, TP. Hồ Chí Minh, Đà Nẵng, và Cần Thơ.
+                        Ngoài ra, bạn cũng có thể đặt hàng trực tuyến trên website của chúng tôi hoặc thông qua các sàn thương mại điện tử như Shopee, Lazada, và Tiki.
+                        Tất cả sản phẩm đều được kiểm tra kỹ lưỡng trước khi giao hàng để đảm bảo chất lượng tốt nhất đến tay khách hàng.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Câu hỏi 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        2. Tôi có thể đổi trả mỹ phẩm không?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
+                    <div class="accordion-body">
+                        Chúng tôi hỗ trợ đổi trả sản phẩm trong các trường hợp sau:
+                        <ul>
+                            <li>Sản phẩm bị lỗi do nhà sản xuất (hư hỏng, thiếu phụ kiện).</li>
+                            <li>Không đúng sản phẩm bạn đã đặt hàng.</li>
+                        </ul>
+                        Điều kiện đổi trả:
+                        <ol>
+                            <li>Sản phẩm còn nguyên bao bì, chưa qua sử dụng.</li>
+                            <li>Khách hàng giữ lại hóa đơn mua hàng và gửi kèm trong quá trình đổi trả.</li>
+                        </ol>
+                        Thời gian hỗ trợ đổi trả: trong vòng 7 ngày kể từ ngày nhận hàng. Vui lòng liên hệ bộ phận chăm sóc khách hàng để được hướng dẫn chi tiết.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Câu hỏi 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        3. Các phương thức thanh toán là gì?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree">
+                    <div class="accordion-body">
+                        Chúng tôi cung cấp nhiều phương thức thanh toán để khách hàng lựa chọn:
+                        <ul>
+                            <li>Thanh toán khi nhận hàng (COD): dành cho khách hàng đặt hàng trực tuyến.</li>
+                            <li>Thanh toán qua thẻ ngân hàng: chấp nhận thẻ ATM, Visa, Mastercard.</li>
+                            <li>Thanh toán qua ví điện tử: hỗ trợ các ví phổ biến như MoMo, ZaloPay, VNPay.</li>
+                            <li>Chuyển khoản ngân hàng: thông tin tài khoản sẽ được cung cấp khi khách hàng lựa chọn phương thức này.</li>
+                        </ul>
+                        Tất cả các giao dịch đều được bảo mật để đảm bảo an toàn cho thông tin của khách hàng.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Câu hỏi 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        4. Mỹ phẩm có nguồn gốc xuất xứ từ đâu?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour">
+                    <div class="accordion-body">
+                        Chúng tôi chỉ cung cấp các sản phẩm mỹ phẩm chính hãng từ các thương hiệu nổi tiếng trên thế giới.
+                        Một số nguồn gốc cụ thể bao gồm:
+                        <ul>
+                            <li>Hàn Quốc: Các thương hiệu nổi tiếng như Innisfree, Laneige, The Face Shop.</li>
+                            <li>Nhật Bản: Sản phẩm từ Shiseido, Hada Labo, Kose.</li>
+                            <li>Mỹ và Châu Âu: Bao gồm các nhãn hàng như L'Oréal, Maybelline, Estee Lauder.</li>
+                        </ul>
+                        Tất cả sản phẩm đều được nhập khẩu chính ngạch và có giấy tờ chứng minh nguồn gốc rõ ràng. Chúng tôi cam kết không bán hàng giả, hàng nhái, hay kém chất lượng.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

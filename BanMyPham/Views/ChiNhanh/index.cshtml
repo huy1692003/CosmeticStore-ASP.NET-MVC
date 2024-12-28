@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Chi nhánh ";
+    @model List<BanMyPham.Models.ChiNhanh>
+
+}
+<div class="my-3 p-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="https://localhost:44356" class="text-decoration-none">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Danh sách chi nhánh</li>
+        </ol>
+    </nav>
+
+    <div class="d-flex flex-wrap px-5 gap-2">
+        @foreach (var x in Model)
+        {
+            <div class="card" style="width: 13rem;">
+                <img src="/@x.HinhAnh" class="card-img-top" style="width:100%;height:200px" alt="...">
+                <div class="card-body">
+                    <!-- Giới hạn tên chỉ 2 dòng -->
+                    <h5 class="card-title" style="display: -webkit-box;
+                                                   -webkit-line-clamp: 2;
+                                                   -webkit-box-orient: vertical;
+                                                   overflow: hidden;
+                                                   text-overflow: ellipsis;">
+                        @x.TenChiNhanh
+                    </h5>
+                    <!-- Giới hạn địa chỉ chỉ 3 dòng -->
+                    <p class="card-text" style="display: -webkit-box;
+                                                -webkit-line-clamp: 3;
+                                                -webkit-box-orient: vertical;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;">
+                        @x.DiaChi
+                    </p>
+                    <a href="#" class="btn btn-primary">@x.ThanhPho</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,43 @@
+# Build thư mục và file
+bin/
+obj/
+*.log
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Tệp và thư mục cấu hình
+*.vs/
+.vscode/
+*.vscode/
+*.DS_Store
+
+# Thư viện phụ thuộc
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Thông tin về khóa bảo mật và bí mật
+*.key
+*.pfx
+
+# File tạm hoặc backup
+*.tmp
+*.bak
+*.swp
+*~
+
+# Nội dung phát sinh của hệ điều hành
+Thumbs.db
+*.class
+*.pyc
+*.pyo
+
+# Tệp do công cụ IDE tạo
+_ReSharper*/
+*.ReSharper
+.idea/

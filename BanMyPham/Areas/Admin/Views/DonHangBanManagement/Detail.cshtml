@@ -1,0 +1,78 @@
+﻿@model IEnumerable<dynamic> 
+@{
+    ViewData["Title"] = "Chi tiết đơn hàng";
+    Layout = "~/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<div class="container my-5">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h4>Chi tiết đơn hàng</h4>
+        </div>
+        <div class="card-body">
+            <!-- Thông tin cơ bản đơn hàng -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <h5>Thông tin khách hàng</h5>
+                    <p><strong>Tên người nhận:</strong> @ViewBag.ThongTinDonHang.TenNguoiNhan</p>
+                    <p><strong>Email:</strong> @ViewBag.ThongTinDonHang.Email</p>
+                    <p><strong>Số điện thoại:</strong> @ViewBag.ThongTinDonHang.SoDienThoai</p>
+                    <p><strong>Địa chỉ:</strong> @ViewBag.ThongTinDonHang.DiaChiChiTiet</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Thông tin đơn hàng</h5>
+                    <p><strong>Mã hóa đơn:</strong> @ViewBag.ThongTinDonHang.MaDH</p>
+                    <p><strong>Ngày đặt hàng:</strong> @ViewBag.ThongTinDonHang.NgayDH?.ToString("dd/MM/yyyy")</p>
+                    <p><strong>Phương thức thanh toán:</strong> @ViewBag.ThongTinDonHang.PTTT</p>
+                    <p><strong>Tổng tiền:</strong> @String.Format("{0:N0}", ViewBag.ThongTinDonHang.TongTien) đ</p>
+                </div>
+            </div>
+
+            <!-- Danh sách sản phẩm -->
+            <h5 class="mb-3">Danh sách sản phẩm</h5>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Hình ảnh</th>
+                            <th scope="col">Tên sản phẩm</th>
+                            <th scope="col">Số lượng</th>
+                            <th scope="col">Giá</th>
+                            <th scope="col">Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            int index = 1; // Khởi tạo index từ 1 (hoặc 0 nếu bạn muốn bắt đầu từ 0)
+                            foreach (var sp in Model)
+                            {
+                                <tr>
+                                    <th scope="row">@index</th>
+                                    <td><img src="@Url.Content("~/"+sp.anhsp)" alt="@sp.tensp" class="img-thumbnail" style="width: 100px; height: auto;"></td>
+                                    <td>@sp.tensp</td>
+                                    <td>@sp.soluong</td>
+                                    <td>@String.Format("{0:N0}", sp.giasp) đ</td>
+                                    <td>@String.Format("{0:N0}", sp.tongtien) đ</td>
+                                </tr>
+                                index++; // Tăng index sau khi đã in ra giá trị
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="6" class="text-center text-muted">Không có sản phẩm nào trong đơn hàng này.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Quay lại -->
+            <div class="mt-4">
+                <a href="@Url.Action("Index", "DonHangBanManagement")" class="btn btn-secondary">Quay lại danh sách</a>
+            </div>
+        </div>
+    </div>
+</div>

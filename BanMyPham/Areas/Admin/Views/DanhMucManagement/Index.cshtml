@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "~/Views/Shared/_layoutAdmin.cshtml";
+}
+@model IEnumerable<BanMyPham.Models.DanhMuc>
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4 class="mb-0">Quản lý danh mục</h4>
+      
+            <input type="text" id="searchInput" style="width: 300px;" class="form-control me-2" placeholder="Tìm kiếm danh mục...">
+            <a href="@Url.Action("Create", "DanhMucManagement" , new {area="Admin"})" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Thêm mới
+            </a>
+        
+    </div>
+
+    <div class="">
+        <div class="">
+            <div class="table-responsive">
+                <table  class="table table-hover ">
+                    <thead>
+                        <tr class="table-dark" style="border-radius: 10px;">
+                            <th scope="col" width="15%" style="border-top-left-radius: 5px;">Mã danh mục</th>
+                            <th scope="col" width="75%">Tên danh mục</th>
+                            <th scope="col" width="10%" style="border-top-right-radius: 5px;">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="categoryTableBody">
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.MaDanhMuc</td>
+                                <td>@item.TenDanhMuc</td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a href="@Url.Action("Edit", "DanhMucManagement", new { id = item.MaDanhMuc })" 
+                                           class="btn btn-warning btn-sm " style="margin-right: 5px;">
+                                            Sửa
+                                        </a>
+                                        <a href="@Url.Action("Delete", "DanhMucManagement", new { id = item.MaDanhMuc })" 
+                                           class="btn btn-danger btn-sm"
+                                           onclick="return confirm('Bạn có chắc chắn muốn xóa danh mục này?');">
+                                            Xóa
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+document.getElementById('searchInput').addEventListener('keyup', function() {
+    let searchText = this.value.toLowerCase();
+    let rows = document.getElementById('categoryTableBody').getElementsByTagName('tr');
+    
+    for (let row of rows) {
+        let maDanhMuc = row.cells[0].textContent.toLowerCase();
+        let tenDanhMuc = row.cells[1].textContent.toLowerCase();
+        
+        if (maDanhMuc.includes(searchText) || tenDanhMuc.includes(searchText)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    }
+});
+
+
+</script>

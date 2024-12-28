@@ -1,0 +1,144 @@
+﻿@using Newtonsoft.Json
+@{
+    ViewData["Title"] = "Thống kê cửa hàng";
+    Layout = "~/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<div class="container mt-2">
+    <h2>@ViewData["Title"]</h2>
+
+    <!-- Hiển thị thông tin thống kê tổng quát -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <button class="btn btn-primary w-100" style="height:70px ; border-radius:20px" onclick="window.location.href='@Url.Action("Index","SanPhamManagement")'">
+                Sản phẩm: @ViewBag.slSP
+            </button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-secondary w-100" style="height:70px ; border-radius:20px" onclick="window.location.href='@Url.Action("Index","ChiNhanhManagement")'">
+                Chi nhánh: @ViewBag.slChiNhanh
+            </button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-success w-100" style="height:70px ; border-radius:20px" onclick="window.location.href='@Url.Action("Index","DonHangBanManagement")'">
+                Đơn hàng bán: @ViewBag.slDonHang
+            </button>
+        </div>
+        <div class="col-md-3">
+            <button class="btn btn-danger w-100" style="height:70px ; border-radius:20px" onclick="window.location.href='@Url.Action("Index","DonNhapHang")'">
+                Đơn hàng nhập: @ViewBag.slDonHangNhap
+            </button>
+        </div>
+    </div>
+
+    <!-- Biểu đồ thống kê nhập hàng -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Thống kê đơn hàng bán</h4>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <canvas id="donHangBanChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Lấy dữ liệu từ ViewBag
+    var thongKeHDN = @Html.Raw(ViewBag.thongKeHDN);
+    var donHangBan = @Html.Raw(ViewBag.donHangBan);
+
+    // Dữ liệu cho biểu đồ sản phẩm nhập
+    var thangNhap = thongKeHDN.map(function (item) { return 'Tháng ' + item.Thang; });
+    var soLuongNhap = thongKeHDN.map(function (item) { return item.SoLuong; });
+    var tongTienNhap = thongKeHDN.map(function (item) { return item.TongTien; });
+    console.log(soLuongNhap)
+    console.log(tongTienNhap)
+    // Vẽ biểu đồ với Chart.js
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar', // Loại biểu đồ
+        data: {
+            labels: thangNhap, // Dữ liệu trục X (tháng)
+            datasets: [
+                {
+                    label: 'Sản phẩm nhập',
+                    data: soLuongNhap, // Dữ liệu trục Y (số lượng)
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Tổng giá trị nhập',
+                    data: tongTienNhap, // Dữ liệu trục Y (tổng tiền)
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true // Đảm bảo trục Y bắt đầu từ 0
+                }
+            }
+        }
+    });
+
+      var thangBan = donHangBan.map(item => 'Tháng ' + item.Thang); // Trục X
+        var tongTienBan = donHangBan.map(item => item.TongTienBan);  // Trục Y
+
+        // Log dữ liệu kiểm tra
+        console.log("Dữ liệu tháng bán:", thangBan);
+        console.log("Tổng tiền bán:", tongTienBan);
+
+        // Vẽ biểu đồ với Chart.js
+        var ctxBan = document.getElementById('donHangBanChart').getContext('2d');
+        var donHangBanChart = new Chart(ctxBan, {
+            type: 'line', // Loại biểu đồ đường (line)
+            data: {
+                labels: thangBan, // Dữ liệu trục X
+                datasets: [
+                    {
+                        label: 'Doanh thu (VNĐ)',
+                        data: tongTienBan, // Dữ liệu trục Y
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)', // Màu nền
+                        borderColor: 'rgba(75, 192, 192, 1)',        // Màu đường viền
+                        borderWidth: 2,
+                        tension: 0.3 // Độ cong của đường (tăng độ mượt)
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true, // Đảm bảo trục Y bắt đầu từ 0
+                        ticks: {
+                            callback: function (value) {
+                                // Định dạng hiển thị tiền VNĐ
+                                return new Intl.NumberFormat('vi-VN', {
+                                    style: 'currency',
+                                    currency: 'VND'
+                                }).format(value);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+</script>

@@ -1,0 +1,43 @@
+﻿.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-toggle {
+    background-color: #007bff; /* Màu nền của menu chính */
+    color: white; /* Màu chữ */
+}
+
+    /* Màu nền khi hover vào menu chính */
+    .dropdown-toggle:hover {
+        background-color: white; /* Màu nền khi hover */
+    }
+
+/* Chỉnh màu nền cho menu con */
+.dropdown-menu {
+    background-color: white; /* Màu nền của menu con */
+}
+
+/* Màu nền khi hover vào menu con */
+.dropdown-item:hover {
+    background-color: white; /* Màu nền của item khi hover */
+}
+
+/* Hiển thị menu khi hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hiệu ứng khi menu xuất hiện */
+.dropdown-menu {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* Căn chỉnh icon */
+.dropdown-item i {
+    font-size: 16px;
+    margin-right:6px/* Tăng kích thước icon nếu cần */
+}

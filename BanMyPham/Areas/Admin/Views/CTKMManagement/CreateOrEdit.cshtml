@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "~/Views/Shared/_layoutAdmin.cshtml";
+    ViewData["Title"] = Model == null ? "Thêm chương trình khuyến mãi" : "Sửa chương trình khuyến mãi";
+}
+@model BanMyPham.Models.CTKM
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">@ViewData["Title"]</h4>
+                    
+                    <form method="post" asp-area="Admin" asp-controller="CTKMManagement" asp-action="@(Model == null ? "Create" : "Edit")">
+                        <div class="mb-3">
+                            <label asp-for="MaCTKM" class="form-label">Mã chương trình khuyến mãi</label>
+                            <input value="@Model?.MaCTKM" name="MaCTKM" asp-for="MaCTKM" class="form-control" required />
+                            <span asp-validation-for="MaCTKM" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="TenCTKM" class="form-label">Tên chương trình khuyến mãi</label>
+                            <input value="@Model?.TenCTKM" name="TenCTKM" asp-for="TenCTKM" class="form-control" required />
+                            <span asp-validation-for="TenCTKM" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="NgayBatDau" class="form-label">Ngày bắt đầu</label>
+                            <input value="@Model?.NgayBatDau" name="NgayBatDau" asp-for="NgayBatDau" type="date" class="form-control" required />
+                            <span asp-validation-for="NgayBatDau" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="NgayKetThuc" class="form-label">Ngày kết thúc</label>
+                            <input value="@Model?.NgayKetThuc" name="NgayKetThuc" asp-for="NgayKetThuc" type="date" class="form-control" required />
+                            <span asp-validation-for="NgayKetThuc" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Discount" class="form-label">Phần trăm giảm</label>
+                            <input value="@Model?.Discount" name="Discount" asp-for="Discount" type="number" min="0" max="100" class="form-control" required />
+                            <span asp-validation-for="Discount" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a href="@Url.Action("Index","CTKMManagement")" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Quay lại
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Lưu
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+   
+}

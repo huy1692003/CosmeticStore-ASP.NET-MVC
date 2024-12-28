@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Đăng nhập";
+}
+
+<h2 class="text-center my-3" style="color:darkorange">Đăng nhập</h2>
+
+<style>
+    .custom-input {
+        font-size: 16px;
+        outline: none !important;
+        border-radius: 25px; /* Bo tròn góc */
+        border: 1px solid #FD7E14 !important; /* Màu viền cam */
+        box-shadow: none; /* Loại bỏ shadow mặc định khi focus */
+    }
+
+        .custom-input:focus {
+            outline: none; /* Loại bỏ outline mặc định */
+            border-color: orangered !important; /* Viền cam khi focus */
+        }
+
+    .btn-warning-custom {
+        border-radius: 20px;
+        background-color: darkorange;
+        color: white;
+    }
+</style>
+
+<div class="container">
+    <form id="loginForm" style="width:70%;margin:0 auto">
+        <div class="mb-3 row">
+            <label for="username" class="col-sm-3 col-form-label fw-bolder">Tên đăng nhập</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control custom-input" id="username" name="username" required placeholder="Nhập tên đăng nhập" />
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <label for="password" class="col-sm-3 col-form-label fw-bolder">Mật khẩu</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control custom-input" id="password" name="password" required placeholder="Nhập mật khẩu" />
+            </div>
+        </div>
+
+        <!-- Hiển thị thông báo lỗi nếu có -->
+        <div id="error-message" class="alert alert-danger" style="display: none;"></div>
+
+        <div class="d-flex justify-content-between mt-3">
+            <p>Bạn chưa có tài khoản? <a href="@Url.Action("DangKy", "TaiKhoan")" class="text-primary">Đăng ký</a></p>
+            <div class="text-center">
+                <button type="submit" class="btn btn-warning-custom w-100">Đăng nhập</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<!-- Đưa vào script jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#loginForm').submit(function (event) {
+            event.preventDefault();  // Ngăn form không bị gửi đi theo cách thông thường
+
+            var username = $('#username').val();
+            var password = $('#password').val();
+
+            $.ajax({
+                url: '@Url.Action("DangNhapPost", "TaiKhoan")',  // Đảm bảo URL đúng
+                method: 'POST',
+                data: {
+                    username: username,
+                    password: password
+                },
+                success: function (response) {
+                    if (response.success) {
+                        if(response.role===0)
+                        {
+                        let user ={ username : username , role: response.role}
+                        localStorage.setItem('user', JSON.stringify(user) )
+                        }                        
+                        else{
+                            let admin ={username:username,role:response.role}
+                              localStorage.setItem('admin', JSON.stringify(admin) )
+                        }
+                        // Lưu thông tin vào localStorage
+
+                        // Chuyển hướng đến trang chủ hoặc trang quản trị
+                        window.location.href = response.redirectUrl;
+                    } else {
+                        $('#error-message').text(response.message).show();
+                    }
+                },
+                error: function () {
+                    $('#error-message').text('Đã có lỗi xảy ra, vui lòng thử lại').show();
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Chi tiết đơn nhập hàng";
+    Layout = "~/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<div class="container-fluid">
+    <h4 class="mb-4">Chi tiết đơn nhập hàng - Mã đơn: @ViewBag.MaDN</h4>
+    <p><strong>Ngày nhập:</strong> @ViewBag.NgayNhap.ToString("dd/MM/yyyy HH:mm")</p>
+    <p><strong>Tổng tiền nhập:</strong> @String.Format("{0:N0}", ViewBag.TongTienNhap) đ</p>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Danh sách sản phẩm trong đơn</h5>
+            <table class="table table-hover">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">Mã sản phẩm</th>
+                        <th scope="col">Tên sản phẩm</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Giá nhập</th>
+                        <th scope="col">Tổng tiền</th>
+                        <th scope="col">Loại sản phẩm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.ChiTiet)
+                    {
+                        <tr>
+                            <td>@item.MaSP</td>
+                            <td>@item.TenSanPham</td>
+                            <td>@item.SoLuong</td>
+                            <td>@String.Format("{0:N0}", item.TongTien) đ</td>
+                            <td>@String.Format("{0:N0}", item.TongTien) đ</td>
+                            <td>@item.LoaiSP</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between mt-4">
+        <a href="@Url.Action("Index", "DonNhapHang", new { area = "Admin" })" class="btn btn-secondary">Quay lại</a>
+    </div>
+</div>
