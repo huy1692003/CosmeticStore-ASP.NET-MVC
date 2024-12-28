@@ -27,6 +27,7 @@ wwwroot\image\19203025_ch24.jpg
 wwwroot\image\19203033_ch9.jpg
 wwwroot\image\19203043_ch20.jpg
 wwwroot\image\19203054_hinh8.jpg
+wwwroot\image\28162201_nem-lui-cho-sai.jpeg
 wwwroot\image\banner.png
 wwwroot\image\ch1.jpg
 wwwroot\image\ch10.jpg

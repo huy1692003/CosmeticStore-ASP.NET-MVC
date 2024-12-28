@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "D:\\JOB\\C#\\BanMyPham\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\areas\\admin\\controllers\\sanphammanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\areas\\admin\\controllers\\sanphammanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\controllers\\danhmucsanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\controllers\\danhmucsanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\areas\\admin\\controllers\\donnhaphangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\areas\\admin\\controllers\\donnhaphangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\areas\\admin\\controllers\\thongkecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\areas\\admin\\controllers\\thongkecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\areas\\admin\\controllers\\sanphammanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\areas\\admin\\controllers\\sanphammanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\banmypham.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\banmypham.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\areas\\admin\\controllers\\ctkmmanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,28 +43,12 @@
       "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\areas\\admin\\controllers\\danhmucmanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\controllers\\danhmucsanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\controllers\\danhmucsanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\banmypham.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\banmypham.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\banmypham.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\banmypham.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8D911E2D-E11B-443C-B7BA-F84ED1EB2B62}|Winform\\Winform.csproj|D:\\JOB\\C#\\BanMyPham\\winform\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{8D911E2D-E11B-443C-B7BA-F84ED1EB2B62}|Winform\\Winform.csproj|solutionrelative:winform\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\views\\giohang\\muahangthanhcong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -57,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|solutionrelative:banmypham\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E1B83CB-5367-4DEC-AE62-975B11E11E9B}|BanMyPham\\BanMyPham.csproj|d:\\job\\c#\\banmypham\\banmypham\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -137,7 +137,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -157,33 +157,95 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DonNhapHangController.cs",
+              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\DonNhapHangController.cs",
+              "RelativeDocumentMoniker": "BanMyPham\\Areas\\Admin\\Controllers\\DonNhapHangController.cs",
+              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\DonNhapHangController.cs",
+              "RelativeToolTip": "BanMyPham\\Areas\\Admin\\Controllers\\DonNhapHangController.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAUwKIAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T15:20:18.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BanMyPham.csproj",
+              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\BanMyPham.csproj",
+              "RelativeDocumentMoniker": "BanMyPham\\BanMyPham.csproj",
+              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\BanMyPham.csproj",
+              "RelativeToolTip": "BanMyPham\\BanMyPham.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-26T15:00:30.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DanhMucSanPhamController.cs",
+              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Controllers\\DanhMucSanPhamController.cs",
+              "RelativeDocumentMoniker": "BanMyPham\\Controllers\\DanhMucSanPhamController.cs",
+              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Controllers\\DanhMucSanPhamController.cs",
+              "RelativeToolTip": "BanMyPham\\Controllers\\DanhMucSanPhamController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-28T08:38:59.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GioHangController.cs",
+              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Controllers\\GioHangController.cs",
+              "RelativeDocumentMoniker": "BanMyPham\\Controllers\\GioHangController.cs",
+              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Controllers\\GioHangController.cs",
+              "RelativeToolTip": "BanMyPham\\Controllers\\GioHangController.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAgwHsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T08:39:28.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Views\\GioHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "BanMyPham\\Views\\GioHang\\Index.cshtml",
+              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Views\\GioHang\\Index.cshtml",
+              "RelativeToolTip": "BanMyPham\\Views\\GioHang\\Index.cshtml",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAuwLcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T08:35:38.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "SanPhamManagementController.cs",
               "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\SanPhamManagementController.cs",
               "RelativeDocumentMoniker": "BanMyPham\\Areas\\Admin\\Controllers\\SanPhamManagementController.cs",
               "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\SanPhamManagementController.cs",
               "RelativeToolTip": "BanMyPham\\Areas\\Admin\\Controllers\\SanPhamManagementController.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAkwGoAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAswMkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T08:41:54.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T08:41:54.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CTKMManagementController.cs",
-              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\CTKMManagementController.cs",
-              "RelativeDocumentMoniker": "BanMyPham\\Areas\\Admin\\Controllers\\CTKMManagementController.cs",
-              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\CTKMManagementController.cs",
-              "RelativeToolTip": "BanMyPham\\Areas\\Admin\\Controllers\\CTKMManagementController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ThongKeController.cs",
+              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\ThongKeController.cs",
+              "RelativeDocumentMoniker": "BanMyPham\\Areas\\Admin\\Controllers\\ThongKeController.cs",
+              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\ThongKeController.cs",
+              "RelativeToolTip": "BanMyPham\\Areas\\Admin\\Controllers\\ThongKeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T08:41:53.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T09:23:23.089Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "ChiNhanhManagementController.cs",
               "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\ChiNhanhManagementController.cs",
               "RelativeDocumentMoniker": "BanMyPham\\Areas\\Admin\\Controllers\\ChiNhanhManagementController.cs",
@@ -191,25 +253,23 @@
               "RelativeToolTip": "BanMyPham\\Areas\\Admin\\Controllers\\ChiNhanhManagementController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T08:41:52.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T08:41:52.496Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DonNhapHangController.cs",
-              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\DonNhapHangController.cs",
-              "RelativeDocumentMoniker": "BanMyPham\\Areas\\Admin\\Controllers\\DonNhapHangController.cs",
-              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\DonNhapHangController.cs",
-              "RelativeToolTip": "BanMyPham\\Areas\\Admin\\Controllers\\DonNhapHangController.cs",
-              "ViewState": "AgIAALoAAAAAAAAAAAAowIgAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CTKMManagementController.cs",
+              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\CTKMManagementController.cs",
+              "RelativeDocumentMoniker": "BanMyPham\\Areas\\Admin\\Controllers\\CTKMManagementController.cs",
+              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\CTKMManagementController.cs",
+              "RelativeToolTip": "BanMyPham\\Areas\\Admin\\Controllers\\CTKMManagementController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-22T15:20:18.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T08:41:53.885Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "DanhMucManagementController.cs",
               "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Areas\\Admin\\Controllers\\DanhMucManagementController.cs",
               "RelativeDocumentMoniker": "BanMyPham\\Areas\\Admin\\Controllers\\DanhMucManagementController.cs",
@@ -217,49 +277,11 @@
               "RelativeToolTip": "BanMyPham\\Areas\\Admin\\Controllers\\DanhMucManagementController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T08:41:51.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T08:41:51.756Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DanhMucSanPhamController.cs",
-              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Controllers\\DanhMucSanPhamController.cs",
-              "RelativeDocumentMoniker": "BanMyPham\\Controllers\\DanhMucSanPhamController.cs",
-              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Controllers\\DanhMucSanPhamController.cs",
-              "RelativeToolTip": "BanMyPham\\Controllers\\DanhMucSanPhamController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBgAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-28T08:38:59.972Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BanMyPham.csproj",
-              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\BanMyPham.csproj",
-              "RelativeDocumentMoniker": "BanMyPham\\BanMyPham.csproj",
-              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\BanMyPham.csproj",
-              "RelativeToolTip": "BanMyPham\\BanMyPham.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-26T15:00:30.604Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BanMyPham",
-              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\BanMyPham.csproj",
-              "RelativeDocumentMoniker": "BanMyPham\\BanMyPham.csproj",
-              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\BanMyPham.csproj",
-              "RelativeToolTip": "BanMyPham\\BanMyPham.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-26T14:58:26.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\appsettings.json",
               "RelativeDocumentMoniker": "BanMyPham\\appsettings.json",
@@ -271,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "App.config",
               "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\Winform\\App.config",
               "RelativeDocumentMoniker": "Winform\\App.config",
@@ -283,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "MuaHangThanhCong_COD.cshtml",
               "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Views\\GioHang\\MuaHangThanhCong_COD.cshtml",
               "RelativeDocumentMoniker": "BanMyPham\\Views\\GioHang\\MuaHangThanhCong_COD.cshtml",
@@ -295,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "BanMyPham\\Controllers\\HomeController.cs",
@@ -307,19 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "GioHangController.cs",
-              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Controllers\\GioHangController.cs",
-              "RelativeDocumentMoniker": "BanMyPham\\Controllers\\GioHangController.cs",
-              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Controllers\\GioHangController.cs",
-              "RelativeToolTip": "BanMyPham\\Controllers\\GioHangController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAgwBsAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-23T08:39:28.698Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "MuaHangThanhCong.cshtml",
               "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Views\\GioHang\\MuaHangThanhCong.cshtml",
               "RelativeDocumentMoniker": "BanMyPham\\Views\\GioHang\\MuaHangThanhCong.cshtml",
@@ -328,18 +338,6 @@
               "ViewState": "AgIAABAAAAAAAAAAAADwvykAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-23T08:35:39.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Views\\GioHang\\Index.cshtml",
-              "RelativeDocumentMoniker": "BanMyPham\\Views\\GioHang\\Index.cshtml",
-              "ToolTip": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\Views\\GioHang\\Index.cshtml",
-              "RelativeToolTip": "BanMyPham\\Views\\GioHang\\Index.cshtml",
-              "ViewState": "AgIAAJ8AAAAAAAAAAAAiwLMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-23T08:35:38.464Z"
             },
             {
               "$type": "Document",

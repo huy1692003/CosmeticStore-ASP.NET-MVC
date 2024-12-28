@@ -148,8 +148,7 @@ namespace BanMyPham.Areas.Admin.Controllers
                     return RedirectToAction(nameof(Index));
                 }
 
-                if (ModelState.IsValid)
-                {
+              
                     // Xử lý upload hình ảnh mới nếu có
                     if (HinhAnh != null && HinhAnh.Length > 0)
                     {
@@ -203,8 +202,7 @@ namespace BanMyPham.Areas.Admin.Controllers
                     dbcontext.SaveChanges();
                     TempData["SuccessMessage"] = "Cập nhật sản phẩm thành công!";
                     return RedirectToAction(nameof(Index));
-                }
-                return RedirectToAction(nameof(Index));
+             
             }
             catch
             {

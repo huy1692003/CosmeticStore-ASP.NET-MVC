@@ -281,3 +281,4 @@ D:\JOB\C#\BanMyPham\BanMyPham\obj\Debug\net7.0\refint\BanMyPham.dll
 D:\JOB\C#\BanMyPham\BanMyPham\obj\Debug\net7.0\BanMyPham.pdb
 D:\JOB\C#\BanMyPham\BanMyPham\obj\Debug\net7.0\BanMyPham.genruntimeconfig.cache
 D:\JOB\C#\BanMyPham\BanMyPham\obj\Debug\net7.0\ref\BanMyPham.dll
+D:\JOB\C#\BanMyPham\BanMyPham\obj\Debug\net7.0\BanMyPham.sourcelink.json

@@ -118,6 +118,13 @@ namespace BanMyPham.Controllers
             ViewBag.MaDH = id;
             var donhang=appDBcontext.DonHangs.FirstOrDefault(s=>s.MaDH == id);
             return View(donhang);
+        }       
+        [HttpGet]
+        public IActionResult MuaHangThanhCong_COD(string id)
+        {
+            ViewBag.MaDH = id;
+            var donhang=appDBcontext.DonHangs.FirstOrDefault(s=>s.MaDH == id);
+            return View(donhang);
         }
     }
 }

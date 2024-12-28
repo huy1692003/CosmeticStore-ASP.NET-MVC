@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3Vuk8SR+WyVZSgeGWwxJtvnpyrOa9/uM/4w15xSWZDQ=",
+  "Hash": "pKJRouIIhrQu14j5ynfIGyEZz6iPxopa6gUo+2ws1EM=",
   "Source": "BanMyPham",
   "BasePath": "_content/BanMyPham",
   "Mode": "Default",
@@ -666,6 +666,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\19203054_hinh8.jpg"
+    },
+    {
+      "Identity": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\28162201_nem-lui-cho-sai.jpeg",
+      "SourceId": "BanMyPham",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\",
+      "BasePath": "_content/BanMyPham",
+      "RelativePath": "image/28162201_nem-lui-cho-sai#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3nhmmvwock",
+      "Integrity": "MUvOw7qVoMjdt5FSkKZ6EiQPdRLkBQvWZ1r9yur/AiI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\28162201_nem-lui-cho-sai.jpeg"
     },
     {
       "Identity": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\banner.png",
@@ -4829,7 +4850,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 01:53:34 GMT"
+          "Value": "Sat, 28 Dec 2024 09:14:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4874,7 +4895,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 01:53:34 GMT"
+          "Value": "Sat, 28 Dec 2024 09:14:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4919,7 +4940,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 01:53:34 GMT"
+          "Value": "Sat, 28 Dec 2024 09:14:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4956,7 +4977,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 18 Dec 2024 01:53:34 GMT"
+          "Value": "Sat, 28 Dec 2024 09:14:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7345,6 +7366,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-bDfogSDi7wwOr1J5y3YKJKxQkWIeZBrWBmz3vwSy7gE="
+        }
+      ]
+    },
+    {
+      "Route": "image/28162201_nem-lui-cho-sai.3nhmmvwock.jpeg",
+      "AssetFile": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\28162201_nem-lui-cho-sai.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "478880"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MUvOw7qVoMjdt5FSkKZ6EiQPdRLkBQvWZ1r9yur/AiI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Dec 2024 09:22:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3nhmmvwock"
+        },
+        {
+          "Name": "label",
+          "Value": "image/28162201_nem-lui-cho-sai.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MUvOw7qVoMjdt5FSkKZ6EiQPdRLkBQvWZ1r9yur/AiI="
+        }
+      ]
+    },
+    {
+      "Route": "image/28162201_nem-lui-cho-sai.jpeg",
+      "AssetFile": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\28162201_nem-lui-cho-sai.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "478880"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MUvOw7qVoMjdt5FSkKZ6EiQPdRLkBQvWZ1r9yur/AiI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Dec 2024 09:22:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MUvOw7qVoMjdt5FSkKZ6EiQPdRLkBQvWZ1r9yur/AiI="
         }
       ]
     },
