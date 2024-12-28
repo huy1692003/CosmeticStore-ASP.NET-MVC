@@ -1,0 +1,348 @@
+﻿@{
+	ViewData["Title"] = "Giỏ hàng";
+}
+
+<div class="p-4">
+	<h2 class="my-3 text-center">@ViewData["Title"]</h2>
+
+	<div id="cart-container">
+		<!-- Giỏ hàng sẽ được render ở đây -->
+	</div>
+
+	<!-- Tổng tiền giỏ hàng -->
+	<div id="cart-summary">
+		<div class="d-flex justify-content-between mt-4">
+			<p>Giá trị giỏ hàng: <span id="total-amount" class="fs-5 fw-bold">0 VNĐ</span></p>
+			<p>Tổng tiền mua hàng: <span id="selected-total-amount" class="fs-5 fw-bold">0 VNĐ</span></p>
+		</div>
+	</div>
+
+	<!-- Nút Mua hàng -->
+	<div class="text-end">
+		<button id="checkout" class="btn mt-5" style="display: none; border-radius:30px; width:170px; background-color:#FD7E14; color:white" data-bs-toggle="modal" data-bs-target="#orderModal">
+			Mua hàng
+		</button>
+	</div>
+
+	<!-- Modal thông tin đặt hàng -->
+	<!-- Modal thông tin đặt hàng -->
+	<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title fw-bold" id="orderModalLabel">Thông tin giao hàng</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<!-- Form thông tin giao hàng -->
+					<form id="orderForm">
+						<div class="row mb-3">
+							<div class="col-md-12">
+								<input type="text" class="form-control custom-input" placeholder="Họ và tên" name="tenNguoiNhan" required>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col-md-8">
+								<input type="email" class="form-control custom-input" placeholder="Email" name="email" required>
+							</div>
+							<div class="col-md-4">
+								<input type="text" class="form-control custom-input" placeholder="Số điện thoại" name="soDienThoai" required>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col-md-12">
+								<input type="text" class="form-control custom-input" placeholder="Địa chỉ" name="diaChiChiTiet" required>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col-md-4">
+								<input type="text" class="form-control custom-input" placeholder="Phường/Xã" name="phuong" required>
+							</div>
+							<div class="col-md-4">
+								<input type="text" class="form-control custom-input" placeholder="Quận/Huyện" name="huyen" required>
+							</div>
+							<div class="col-md-4">
+								<input type="text" class="form-control custom-input" placeholder="Tỉnh/Thành" name="tinh" required>
+							</div>
+						</div>
+						<!-- Thêm mục nhập mã voucher -->
+						<div class="row mb-3">
+							<div class="col-md-9">
+								<input type="text" id="voucherCode" class="form-control custom-input" placeholder="Nhập mã voucher" name="maCTKM">
+							</div>
+							<div class="col-md-3 text-end">
+								<button type="button" id="applyVoucherBtn" class="btn btn-warning w-100" style="border-radius: 25px;">Sử dụng</button>
+							</div>
+						</div>
+
+						<!-- Hiển thị trạng thái của voucher -->
+						<div id="voucherStatus" class="text-danger fw-semibold" style="display: none;"></div>
+
+						<!-- Phương thức thanh toán -->
+						<p>Tổng tiền phải thanh toán: <span id="amount-order" class="fs-5 fw-bold">0 VNĐ</span></p>
+						<p class="fw-bold">Phương thức thanh toán</p>
+						<div class="form-check mb-2">
+							<input class="form-check-input" type="radio" name="PTTT" id="cod" value="COD" checked>
+							<label class="form-check-label" for="cod">
+								Thanh toán khi giao hàng (COD)
+							</label>
+						</div>
+						<div class="form-check mb-4">
+							<input class="form-check-input" type="radio" name="PTTT" id="bankTransfer" value="BankTransfer">
+							<label class="form-check-label" for="bankTransfer">
+								Thanh toán ngân hàng
+							</label>
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+					<button type="button" class="btn text-white" style="background-color:#FD7E14;" id="createCheckout">Đặt hàng</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+				 $(document).ready(function () {
+			// Lấy dữ liệu giỏ hàng từ localStorage (nếu có)
+			var cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+			// Xử lý sự kiện nhấn nút "Đặt hàng"
+			$("#createCheckout").click(function () {
+				// Lấy dữ liệu từ form thông qua serializeArray()
+				var formDataArray = $('#orderForm').serializeArray();
+
+				// Chuyển mảng formDataArray thành đối tượng JSON
+				var formData = {};
+				formDataArray.forEach(function(item) {
+					formData[item.name] = item.value;
+				});
+
+				// Lấy mã voucher từ ô nhập liệu và thêm vào formData nếu voucher hợp lệ
+				var voucherCode = $("#voucherCode").val().trim();
+				if ($("#voucherStatus").css("display") !== "none") {
+					formData.MaCTKM = voucherCode;  // Thêm mã voucher nếu hợp lệ
+				} else {
+					formData.MaCTKM = null; // Nếu không có voucher, gán null
+				}
+
+				// Lọc danh sách các sản phẩm được chọn từ giỏ hàng
+				var selectedItems = cart.filter(function (item, index) {
+					return $(`.product-checkbox[data-index="${index}"]`).is(":checked");
+				});
+
+				// Kiểm tra nếu không có sản phẩm nào được chọn
+				if (selectedItems.length === 0) {
+					alert("Vui lòng chọn ít nhất một sản phẩm để đặt hàng.");
+					return;
+				}
+					const user = JSON.parse (localStorage.getItem('user'));
+				  if (!user) {
+					alert("Vui lòng đăng nhập trước khi đặt hàng.");
+					return;
+				}
+				// Tạo mảng các sản phẩm chọn và thông tin đơn hàng
+				var listSP = selectedItems.map(function (item) {
+					var tongTien = item.price * item.quantity;  // Tính tổng tiền của sản phẩm
+					return {
+						maSanPham: item.id,           // Mã sản phẩm
+						giaSP: item.price,            // Giá sản phẩm
+						soLuongSanPham: item.quantity, // Số lượng sản phẩm
+						tongTien: tongTien            // Tổng tiền cho sản phẩm
+					};
+				});
+
+				// Chuyển đổi mảng listSP thành chuỗi JSON
+				var listSPJson = JSON.stringify(listSP);
+
+				// Gửi dữ liệu qua AJAX
+				$.ajax({
+					url: '@Url.Action("CreateDonhang", "GioHang")',  // Đảm bảo đường dẫn đúng
+					type: "POST",
+					data: {
+						thongtinDH: JSON.stringify(formData),  // Dữ liệu từ form
+						listSP: listSPJson                     // Danh sách sản phẩm (dưới dạng JSON)
+					},
+					success: function (response) {
+						if (response&& response.message)
+						{
+							  var cart = JSON.parse(localStorage.getItem("cart")) || [];
+							 var boughtProductIds = listSP.map(function(item) { return item.maSanPham; });
+
+		// Lọc giỏ hàng, chỉ giữ lại sản phẩm có id không có trong listSP
+							cart = cart.filter(function(s) {
+								return !boughtProductIds.includes(s.id);  // Loại bỏ sản phẩm đã mua
+							});
+							localStorage.setItem("cart" ,JSON.stringify(cart))
+							alert(response.message)
+							if(formData['PTTT']==='COD')
+							{
+									  window.location.href = '@Url.Action("MuaHangThanhCong_COD", "GioHang")'+"?id="+response.donHangId;
+							}
+							else{
+
+						   window.location.href = '@Url.Action("MuaHangThanhCong", "GioHang")'+"?id="+response.donHangId;
+							}
+
+							// Xử lý sau khi đơn hàng được tạo thành công
+						} else {
+							alert("Có lỗi xảy ra khi đặt hàng.");
+						}
+					},
+					error: function () {
+						alert("Có lỗi xảy ra. Vui lòng thử lại.");
+					}
+				});
+			});
+
+			// Hàm render giỏ hàng
+			function renderCart() {
+				$("#cart-container").empty();
+				let totalAmount = 0;
+
+				if (cart.length === 0) {
+					$("#cart-container").append(`
+						<div class="d-flex flex-column align-items-center justify-content-center bg-light p-4 rounded shadow-sm">
+							<img src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png" alt="Empty Cart" class="mb-3" style="width: 100px; height: 100px;">
+							<p class="text-secondary fs-5 fw-semibold mb-0">Giỏ hàng của bạn hiện tại trống.</p>
+						</div>`);
+					$("#cart-summary").hide();
+					return;
+				}
+
+				let tableHTML = `
+					<table class="table table-bordered table-hover">
+						<thead>
+							<tr>
+								<th>Chọn</th>
+								<th>Ảnh</th>
+								<th>Tên sản phẩm</th>
+								<th>Giá</th>
+								<th>Số lượng</th>
+								<th>Tổng tiền</th>
+								<th>Thao tác</th>
+							</tr>
+						</thead>
+						<tbody>`;
+
+				// Lặp qua các sản phẩm trong giỏ hàng để hiển thị
+				cart.forEach(function (item, index) {
+					totalAmount += item.price * item.quantity;
+
+					tableHTML += `
+						<tr class="cart-item" data-index="${index}">
+							<td><input type="checkbox" class="product-checkbox" data-index="${index}" /></td>
+							<td><img src="${item.image}" alt="${item.name}" width="50" /></td>
+							<td>${item.name}</td>
+							<td>${item.price.toLocaleString()} VNĐ</td>
+							<td><input type="number" value="${item.quantity}" class="quantity-input form-control" min="1" data-index="${index}" /></td>
+							<td>${(item.price * item.quantity).toLocaleString()} VNĐ</td>
+							<td><button class="remove-item-btn btn btn-danger btn-sm" data-index="${index}">Xóa</button></td>
+						</tr>`;
+				});
+
+				tableHTML += `</tbody></table>`;
+
+				// Gắn nội dung bảng giỏ hàng vào phần tử HTML
+				$("#cart-container").append(tableHTML);
+				$("#total-amount").text(totalAmount.toLocaleString() + " VNĐ");
+				$("#cart-summary").show();
+
+				// Cập nhật tổng tiền cho các sản phẩm đã chọn
+				updateSelectedTotal();
+			}
+
+			// Cập nhật tổng tiền các sản phẩm được chọn
+			function updateSelectedTotal() {
+				let selectedTotalAmount = 0;
+
+				// Lặp qua các checkbox được chọn để tính tổng tiền
+				$(".product-checkbox:checked").each(function () {
+					var index = $(this).data("index");
+					selectedTotalAmount += cart[index].price * cart[index].quantity;
+				});
+
+				// Hiển thị tổng tiền các sản phẩm được chọn
+				$("#selected-total-amount").text(selectedTotalAmount.toLocaleString() + " VNĐ");
+
+				// Hiển thị nút "Mua hàng" nếu có sản phẩm được chọn
+				if (selectedTotalAmount > 0) {
+					$("#checkout").show();
+				} else {
+					$("#checkout").hide();
+				}
+
+				// Cập nhật tổng tiền trong modal
+				$("#amount-order").text(selectedTotalAmount.toLocaleString() + " VNĐ");
+			}
+
+			// Xử lý cập nhật số lượng sản phẩm
+			$(document).on("input", ".quantity-input", function () {
+				var index = $(this).data("index");
+				var newQuantity = parseInt($(this).val());
+
+				if (newQuantity > 0) {
+					cart[index].quantity = newQuantity;
+					localStorage.setItem("cart", JSON.stringify(cart));
+					renderCart();
+				}
+			});
+
+			// Xử lý xóa sản phẩm khỏi giỏ hàng
+			$(document).on("click", ".remove-item-btn", function () {
+				var index = $(this).data("index");
+				cart.splice(index, 1);
+				localStorage.setItem("cart", JSON.stringify(cart));
+				renderCart();
+			});
+
+			// Xử lý checkbox chọn sản phẩm
+			$(document).on("change", ".product-checkbox", function () {
+				updateSelectedTotal();
+			});
+
+			// Render giỏ hàng khi trang web được tải
+			renderCart();
+
+			// Áp dụng voucher
+			$("#applyVoucherBtn").click(function () {
+				const voucherCode = $("#voucherCode").val().trim();
+
+				if (voucherCode === "") {
+					$("#voucherStatus").text("Vui lòng nhập mã voucher").show();
+					return;
+				}
+
+				$.ajax({
+					url: "@Url.Action("KiemTraKM", "CTKM")",  // Đảm bảo đường dẫn đúng
+					type: "GET",
+					data: { code: voucherCode },
+					success: function (response) {
+						if (response) {
+							const discount = response.discount;
+							$("#voucherStatus").removeClass("text-danger").addClass("text-success")
+								.text(`Mã hợp lệ! Giảm giá ${discount}%`).show();
+
+							const selectedTotalAmount = parseInt($("#selected-total-amount").text().replace(/[^\d]/g, ""));
+							const newTotal = selectedTotalAmount - (selectedTotalAmount * discount / 100);
+							$("#selected-total-amount").text(newTotal.toLocaleString() + " VNĐ");
+							$("#amount-order").text(newTotal.toLocaleString() + " VNĐ");
+						} else {
+							$("#voucherStatus").removeClass("text-success").addClass("text-danger")
+								.text("Mã voucher không hợp lệ hoặc đã hết hạn").show();
+						}
+					},
+					error: function () {
+						$("#voucherStatus").removeClass("text-success").addClass("text-danger")
+							.text("Có lỗi xảy ra. Vui lòng thử lại sau!").show();
+					}
+				});
+			});
+		});
+
+
+	</script>
+</div>
+
+

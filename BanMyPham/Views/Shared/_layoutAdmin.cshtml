@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Admin Dashboard</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BanMyPham.styles.css" asp-append-version="true" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <style>
+        .nav-link-convert {
+            font-size: 19px;
+            color: dimgray;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+            .nav-link-convert i {
+                margin-right: 10px;
+                width: 20px;
+                text-align: center;
+            }
+
+            .nav-link-convert:hover,
+            .nav-link-convert.active {
+                background-color: #F3F4F6;
+                color: #007bff;
+                padding-left: 25px;
+            }
+
+            .nav-link-convert::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 3px;
+                background-color: #007bff;
+                transform: scaleY(0);
+                transition: transform 0.2s;
+            }
+
+            .nav-link-convert:hover::before,
+            .nav-link-convert.active::before {
+                transform: scaleY(1);
+            }
+
+        /* Toast Custom Styles */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 10px;
+            z-index: 1050;
+        }
+    </style>
+</head>
+<body>
+    <div class="toast-container">
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        @TempData["SuccessMessage"]
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        @TempData["ErrorMessage"]
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div style="border-bottom:1px solid #F3F4F6; padding-bottom:10px; margin-bottom:20px ;text-align:center">
+            <img src="~/image/logo.jpg" style="width:70%; border-radius:20px" />
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link-convert @(ViewContext.RouteData.Values["Controller"].ToString() == "ThongKe" ? "active" : "")"
+                   asp-controller="ThongKe" asp-action="Index">
+                    <i class="fas fa-tachometer-alt"></i> <span>Báo cáo thống kê</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link-convert @(ViewContext.RouteData.Values["Controller"].ToString() == "SanPhamManagement" ? "active" : "")"
+                   asp-controller="SanPhamManagement" asp-action="Index">
+                    <i class="fas fa-cogs"></i> <span>Sản Phẩm</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link-convert @(ViewContext.RouteData.Values["Controller"].ToString() == "ThuongHieuManagement" ? "active" : "")"
+                   asp-controller="ThuongHieuManagement" asp-action="Index">
+                    <i class="fas fa-trademark"></i> <span>Thương Hiệu</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link-convert @(ViewContext.RouteData.Values["Controller"].ToString() == "DanhMucManagement" ? "active" : "")"
+                   asp-controller="DanhMucManagement" asp-action="Index">
+                    <i class="fas fa-list"></i> <span>Danh Mục</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link-convert @(ViewContext.RouteData.Values["Controller"].ToString() == "ChiNhanhManagement" ? "active" : "")"
+                   asp-controller="ChiNhanhManagement" asp-action="Index">
+                    <i class="fas fa-store"></i> <span>Chi Nhánh</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link-convert @(ViewContext.RouteData.Values["Controller"].ToString() == "CTKMManagement" ? "active" : "")"
+                   asp-controller="CTKMManagement" asp-action="Index">
+                    <i class="fas fa-percent"></i> <span>Chương Trình Khuyến Mãi</span>
+                </a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link-convert @(ViewContext.RouteData.Values["Controller"].ToString() == "DonHangBan" ? "active" : "")"
+                   asp-controller="DonHangBanManagement" asp-action="Index">
+                    <i class="fas fa-shopping-cart"></i> <span>Đơn hàng bán</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link-convert @(ViewContext.RouteData.Values["Controller"].ToString() == "DonNhapHang" ? "active" : "")"
+                   asp-controller="DonNhapHang" asp-action="Index">
+                    <i class="fas fa-truck"></i> <span>Nhập Hàng</span>
+                </a>
+            </li> 
+        </ul>
+    </div>
+
+    <div class="main-content" id="main-content">
+        <div class="header d-flex justify-content-between align-items-center ">
+            <div class="toggle-btn" id="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div style="width:auto;cursor:pointer" class="  text-center fw-b position-relative " id="userArea">
+                <i class="fa-solid fa-user fs-5"></i>
+                <span id="userNameDisplay">Đăng nhập / Đăng ký</span>
+                <div id="logoutLink" class="d-none rounded-3  position-absolute" style="top:23px; width:100px;padding:5px; background-color:white ; color:black ; border: 1px solid gray">
+                    <a href="javascript:void(0);" onclick="handleLogout()" class="text-decoration-none text-reset">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+        <div style="padding:20px; border-radius:10px; background-color:white; margin-top:10px; min-height:90vh">
+            @RenderBody()
+        </div>
+    </div>
+
+    <script>
+        // Initialize and show Toast messages if available
+        window.addEventListener('DOMContentLoaded', (event) => {
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'));
+            var toastList = toastElList.map(function(toastEl) {
+                var toast = new bootstrap.Toast(toastEl, {
+                    autohide: true,
+                    delay: 3000
+                });
+                toast.show();
+                return toast;
+            });
+        });
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const userLink = document.getElementById('userNameDisplay');
+            const userArea = document.getElementById('userArea');
+            const logoutLink = document.getElementById('logoutLink');
+            const user = JSON.parse (localStorage.getItem('admin')); // Lấy username từ localStorage
+            if (user) {
+                userLink.textContent = `Xin chào, ${user.username}`;
+                userArea.addEventListener('mouseenter', () => {
+                    logoutLink.classList.remove('d-none');
+                });
+                userArea.addEventListener('mouseleave', () => {
+                    logoutLink.classList.add('d-none');
+                });
+            } else {
+               window.location.href="https://localhost:44356/TaiKhoan/DangNhap"
+
+            }
+        });
+
+        function handleLogout() {
+            localStorage.removeItem('admin');
+            window.location.reload();
+        }
+    </script>
+
+    <script>
+        const toggleBtn = document.getElementById('toggle-btn');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('main-content');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('closed');
+            mainContent.classList.toggle('expanded');
+        });
+
+        
+    </script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

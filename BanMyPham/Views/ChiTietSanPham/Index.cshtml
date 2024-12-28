@@ -1,0 +1,181 @@
+﻿@{
+    ViewData["Title"] = "Chi tiết sản phẩm";
+    @model BanMyPham.Models.SanPham
+
+}
+<div class="my-3 p-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="https://localhost:44356" class="text-decoration-none">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chi tiết sản phẩm / @Model.MaSanPham</li>
+        </ol>
+    </nav>
+
+    <div class="d-flex justify-content-between">
+        <div style="width:30%">
+            <img src="/@Model.HinhAnh" style="width:100%;height:350px;border-radius:30px;object-fit:cover" class="border" alt="Alternate Text" />
+        </div>
+        <div style="width:68%">
+            <h4>@Model.TenSanPham</h4>
+            <h6 class="mb-2">Thương hiệu: @ViewBag.tenthuonghieu</h6>
+            <h6>@Model.XuatXu</h6>
+            <h6 class="@(Model.SoLuong == 0 ? "text-danger" : "text-success")">
+                @(Model.SoLuong == 0 ? "Hết hàng" : $"Số lượng hàng còn: {Model.SoLuong}")
+            </h6>
+            <h5>Giá bán: <span class="fs-2" style="color:orangered">@string.Format("{0:N0} VNĐ", Model.NguyenGia)</span></h5>
+
+            <div class="mt-4 fs-5 fw-bolder d-flex justify-content-between align-items-center w-75">
+                <div>
+                    <span class="me-3">Số lượng</span>
+                    <input id="quantity" min="1" max="@Model.SoLuong" type="number" value="1" style="width:40px;height:30px" @(Model.SoLuong == 0 ? "disabled" : "") />
+                </div>
+
+                @if (Model.SoLuong > 0)
+                {
+                    <button type="button" id="addToCartBtn" class="btn btn-outline-warning me-5 fw-bold"
+                            style="color:orangered;border-color:orangered"
+                            data-id="@Model.MaSanPham"
+                            data-name="@Model.TenSanPham"
+                            data-price="@Model.NguyenGia"
+                           
+                            data-image="@Model.HinhAnh">
+                            
+                        Thêm vào giỏ hàng
+                    </button>
+                }
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Thông tin chi tiết sản phẩm -->
+    <div class="mt-5">
+        <h5>Thông tin chi tiết sản phẩm</h5>
+        <div class="accordion" id="accordionExample">
+            <!-- Công dụng -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCongDung">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCongDung" aria-expanded="true" aria-controls="collapseCongDung">
+                        Công dụng
+                    </button>
+                </h2>
+                <div id="collapseCongDung" class="accordion-collapse collapse show" aria-labelledby="headingCongDung">
+                    <div class="accordion-body">
+                        @Model.CongDungSanPham
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thành phần -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThanhPhan">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThanhPhan" aria-expanded="true" aria-controls="collapseThanhPhan">
+                        Thành phần
+                    </button>
+                </h2>
+                <div id="collapseThanhPhan" class="accordion-collapse collapse show" aria-labelledby="headingThanhPhan">
+                    <div class="accordion-body">
+                        @Model.ThanhPhanSanPham
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hướng dẫn sử dụng -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingHuongDan">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHuongDan" aria-expanded="true" aria-controls="collapseHuongDan">
+                        Hướng dẫn sử dụng
+                    </button>
+                </h2>
+                <div id="collapseHuongDan" class="accordion-collapse collapse show" aria-labelledby="headingHuongDan">
+                    <div class="accordion-body">
+                        @Model.HuongDanSuDungSanPham
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thông tin sản phẩm -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThongTin">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThongTin" aria-expanded="true" aria-controls="collapseThongTin">
+                        Thông tin sản phẩm
+                    </button>
+                </h2>
+                <div id="collapseThongTin" class="accordion-collapse collapse show" aria-labelledby="headingThongTin">
+                    <div class="accordion-body">
+                        @Model.ThongTinSanPham
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h4 class="my-5">Có thể bạn cũng thích <i class="fa-solid fa-heart" style="color: #c23c0f;"></i></h4>
+        <div class="d-flex flex-wrap gap-2 ps-3 " style="width:90% ; margin:10px auto">
+            @foreach (var x in ViewBag.sanpham as List<BanMyPham.Models.SanPham>)
+            {
+                <div class="card" style="width: 15rem;cursor:pointer" onclick="window.location.href='@Url.Action("Index", "ChiTietSanPham", new { id = x.MaSanPham })'">
+                    <!-- Thêm hiệu ứng hover vào ảnh -->
+                    <img src="/@x.HinhAnh" class="card-img-top" style="object-fit:cover; transition: transform 0.3s ease;" alt="Ảnh lỗi">
+                    <div class="card-body">
+                        <p class="card-text fw-bolder" style="color: orangered; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                            @x.TenSanPham
+                        </p>
+                        <p class="fs-4 fw-normal text-primary">
+                            @string.Format("{0:N0} VNĐ", x.NguyenGia)
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Khi nhấn nút "Thêm vào giỏ hàng"
+            $("#addToCartBtn").on("click", function() {
+                var productId = $(this).data("id");
+                var productName = $(this).data("name");
+                var productPrice = $(this).data("price");
+                var productImage = $(this).data("image");
+
+                // Lấy giá trị số lượng từ input (nếu không có giá trị, mặc định là 1)
+                var quantity = parseInt($("#quantity").val()) || 1;
+
+                // Tạo đối tượng sản phẩm
+                var product = {
+                    id: productId,
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,
+                    quantity: quantity  // Sử dụng số lượng lấy từ input
+                };
+
+                // Lấy giỏ hàng hiện tại từ localStorage, nếu có
+                var cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                // Kiểm tra nếu sản phẩm đã có trong giỏ hàng
+                var existingProduct = cart.find(item => item.id === productId);
+
+                if (existingProduct) {
+                    // Nếu sản phẩm đã có trong giỏ hàng, tăng số lượng
+                    existingProduct.quantity += quantity;
+                } else {
+                    // Nếu sản phẩm chưa có trong giỏ hàng, thêm sản phẩm mới vào giỏ hàng
+                    cart.push(product);
+                }
+
+                // Lưu giỏ hàng mới vào localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+                refeshTotalGioHang()
+                // Thông báo thêm sản phẩm thành công
+                alert("Đã thêm sản phẩm vào giỏ hàng!");
+            });
+        });
+    </script>
+</div>
+
+<!-- Thêm JavaScript trực tiếp vào cuối trang -->
+

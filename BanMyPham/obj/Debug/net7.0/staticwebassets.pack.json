@@ -1,0 +1,933 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BanMyPham.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BanMyPham.ajrkhievau.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\css\\layoutUser.css",
+      "PackagePath": "staticwebassets\\css\\layoutUser.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\14081940_cong-doan-trang-banh-da-tho-ha.jpeg",
+      "PackagePath": "staticwebassets\\image\\14081940_cong-doan-trang-banh-da-tho-ha.jpeg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\15150213_house-7387050_1920.jpg",
+      "PackagePath": "staticwebassets\\image\\15150213_house-7387050_1920.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\15150227_th.jfif",
+      "PackagePath": "staticwebassets\\image\\15150227_th.jfif"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202700_ch1.jpg",
+      "PackagePath": "staticwebassets\\image\\19202700_ch1.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202709_ch3.jpg",
+      "PackagePath": "staticwebassets\\image\\19202709_ch3.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202722_ch4.jpg",
+      "PackagePath": "staticwebassets\\image\\19202722_ch4.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202731_ch5.jpg",
+      "PackagePath": "staticwebassets\\image\\19202731_ch5.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202743_ch6.jpg",
+      "PackagePath": "staticwebassets\\image\\19202743_ch6.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202753_ch7.jpg",
+      "PackagePath": "staticwebassets\\image\\19202753_ch7.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202801_ch8.jpg",
+      "PackagePath": "staticwebassets\\image\\19202801_ch8.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202811_ch10.jpg",
+      "PackagePath": "staticwebassets\\image\\19202811_ch10.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202828_ch12.jpg",
+      "PackagePath": "staticwebassets\\image\\19202828_ch12.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202839_ch15.jpg",
+      "PackagePath": "staticwebassets\\image\\19202839_ch15.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202855_ch12.jpg",
+      "PackagePath": "staticwebassets\\image\\19202855_ch12.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202906_ch7.jpg",
+      "PackagePath": "staticwebassets\\image\\19202906_ch7.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202914_ch14.jpg",
+      "PackagePath": "staticwebassets\\image\\19202914_ch14.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202923_ch18.jpg",
+      "PackagePath": "staticwebassets\\image\\19202923_ch18.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202932_ch17.jpg",
+      "PackagePath": "staticwebassets\\image\\19202932_ch17.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202944_ch23.jpg",
+      "PackagePath": "staticwebassets\\image\\19202944_ch23.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19202956_ch3.jpg",
+      "PackagePath": "staticwebassets\\image\\19202956_ch3.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19203004_ch10.jpg",
+      "PackagePath": "staticwebassets\\image\\19203004_ch10.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19203012_ch23.jpg",
+      "PackagePath": "staticwebassets\\image\\19203012_ch23.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19203025_ch24.jpg",
+      "PackagePath": "staticwebassets\\image\\19203025_ch24.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19203033_ch9.jpg",
+      "PackagePath": "staticwebassets\\image\\19203033_ch9.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19203043_ch20.jpg",
+      "PackagePath": "staticwebassets\\image\\19203043_ch20.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\19203054_hinh8.jpg",
+      "PackagePath": "staticwebassets\\image\\19203054_hinh8.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\DocQuyen.png",
+      "PackagePath": "staticwebassets\\image\\DocQuyen.png"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\Hanghot.png",
+      "PackagePath": "staticwebassets\\image\\Hanghot.png"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\Moi.png",
+      "PackagePath": "staticwebassets\\image\\Moi.png"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\banner.png",
+      "PackagePath": "staticwebassets\\image\\banner.png"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch1.jpg",
+      "PackagePath": "staticwebassets\\image\\ch1.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch10.jpg",
+      "PackagePath": "staticwebassets\\image\\ch10.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch11.jpg",
+      "PackagePath": "staticwebassets\\image\\ch11.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch12.jpg",
+      "PackagePath": "staticwebassets\\image\\ch12.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch13.jpg",
+      "PackagePath": "staticwebassets\\image\\ch13.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch14.jpg",
+      "PackagePath": "staticwebassets\\image\\ch14.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch15.jpg",
+      "PackagePath": "staticwebassets\\image\\ch15.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch16.jpg",
+      "PackagePath": "staticwebassets\\image\\ch16.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch17.jpg",
+      "PackagePath": "staticwebassets\\image\\ch17.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch18.jpg",
+      "PackagePath": "staticwebassets\\image\\ch18.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch19.jpg",
+      "PackagePath": "staticwebassets\\image\\ch19.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch2.jpg",
+      "PackagePath": "staticwebassets\\image\\ch2.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch20.jpg",
+      "PackagePath": "staticwebassets\\image\\ch20.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch21.jpg",
+      "PackagePath": "staticwebassets\\image\\ch21.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch22.jpg",
+      "PackagePath": "staticwebassets\\image\\ch22.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch23.jpg",
+      "PackagePath": "staticwebassets\\image\\ch23.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch24.jpg",
+      "PackagePath": "staticwebassets\\image\\ch24.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch25.jpg",
+      "PackagePath": "staticwebassets\\image\\ch25.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch3.jpg",
+      "PackagePath": "staticwebassets\\image\\ch3.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch4.jpg",
+      "PackagePath": "staticwebassets\\image\\ch4.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch5.jpg",
+      "PackagePath": "staticwebassets\\image\\ch5.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch6.jpg",
+      "PackagePath": "staticwebassets\\image\\ch6.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch7.jpg",
+      "PackagePath": "staticwebassets\\image\\ch7.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch8.jpg",
+      "PackagePath": "staticwebassets\\image\\ch8.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\ch9.jpg",
+      "PackagePath": "staticwebassets\\image\\ch9.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\header.gif",
+      "PackagePath": "staticwebassets\\image\\header.gif"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh1.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh1.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh10.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh10.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh100.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh100.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh101.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh101.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh102.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh102.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh11.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh11.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh12.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh12.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh13.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh13.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh14.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh14.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh15.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh15.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh16.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh16.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh17.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh17.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh18.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh18.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh19.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh19.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh2.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh2.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh20.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh20.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh21.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh21.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh22.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh22.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh23.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh23.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh24.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh24.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh25.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh25.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh26.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh26.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh27.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh27.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh28.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh28.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh29.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh29.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh3.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh3.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh30.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh30.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh31.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh31.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh32.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh32.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh33.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh33.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh34.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh34.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh35.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh35.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh36.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh36.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh37.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh37.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh38.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh38.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh39.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh39.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh4.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh4.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh40.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh40.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh41.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh41.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh42.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh42.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh43.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh43.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh44.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh44.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh45.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh45.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh46.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh46.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh47.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh47.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh48.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh48.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh49.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh49.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh5.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh5.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh50.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh50.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh51.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh51.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh52.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh52.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh53.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh53.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh54.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh54.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh55.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh55.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh56.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh56.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh57.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh57.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh58.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh58.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh59.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh59.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh6.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh6.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh60.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh60.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh61.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh61.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh62.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh62.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh63.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh63.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh64.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh64.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh65.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh65.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh66.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh66.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh67.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh67.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh68.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh68.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh69.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh69.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh7.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh7.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh70.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh70.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh71.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh71.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh72.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh72.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh73.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh73.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh74.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh74.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh75.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh75.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh76.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh76.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh77.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh77.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh78.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh78.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh79.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh79.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh8.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh8.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh80.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh80.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh81.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh81.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh82.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh82.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh83.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh83.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh84.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh84.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh85.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh85.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh86.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh86.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh87.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh87.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh88.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh88.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh89.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh89.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh9.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh9.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh90.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh90.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh91.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh91.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh92.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh92.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh93.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh93.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh94.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh94.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh95.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh95.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh96.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh96.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh97.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh97.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh98.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh98.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\hinh99.jpg",
+      "PackagePath": "staticwebassets\\image\\hinh99.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\logo.jpg",
+      "PackagePath": "staticwebassets\\image\\logo.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\logo1.jpg",
+      "PackagePath": "staticwebassets\\image\\logo1.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\m1t1.png",
+      "PackagePath": "staticwebassets\\image\\m1t1.png"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\mualacoqua.png",
+      "PackagePath": "staticwebassets\\image\\mualacoqua.png"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\quangcao1.jpg",
+      "PackagePath": "staticwebassets\\image\\quangcao1.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\quangcao2.jpg",
+      "PackagePath": "staticwebassets\\image\\quangcao2.jpg"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\image\\tracuudonhang.png",
+      "PackagePath": "staticwebassets\\image\\tracuudonhang.png"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\JOB\\C#\\BanMyPham\\BanMyPham\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BanMyPham.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BanMyPham.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BanMyPham.props",
+      "PackagePath": "build\\BanMyPham.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BanMyPham.props",
+      "PackagePath": "buildMultiTargeting\\BanMyPham.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BanMyPham.props",
+      "PackagePath": "buildTransitive\\BanMyPham.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

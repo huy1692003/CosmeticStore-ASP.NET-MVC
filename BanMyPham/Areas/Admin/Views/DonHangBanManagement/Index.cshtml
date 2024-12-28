@@ -1,0 +1,179 @@
+﻿@model IEnumerable<BanMyPham.Models.DonHang>
+@{
+    ViewData["Title"] = "Danh sách hóa đơn bán";
+    Layout = "~/Views/Shared/_layoutAdmin.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="mb-0">Danh sách hóa đơn bán</h4>
+            </div>
+
+            <!-- Form tìm kiếm hóa đơn -->
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm mã hóa đơn..."
+                           value="@ViewBag.SearchTerm">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="nameSearch" class="form-control" placeholder="Tìm kiếm tên người nhận..."
+                           value="@ViewBag.NameSearch">
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="addressSearch" class="form-control" placeholder="Tìm kiếm địa chỉ..."
+                           value="@ViewBag.AddressSearch">
+                </div>
+            </div>
+
+            <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                    <label for="startDate" class="form-label">Ngày bắt đầu</label>
+                    <input type="date" id="startDate" class="form-control" value="@ViewBag.StartDate?.ToString("yyyy-MM-dd")">
+                </div>
+                <div class="col-md-6">
+                    <label for="endDate" class="form-label">Ngày kết thúc</label>
+                    <input type="date" id="endDate" class="form-control" value="@ViewBag.EndDate?.ToString("yyyy-MM-dd")">
+                </div>
+            </div>
+            <div class="mt-3 text-center">
+                <button id="searchButton" class="btn btn-primary">Tìm kiếm</button>
+                <button id="resetButton" class="btn btn-success">Xóa tìm kiếm</button>
+            </div>
+
+            <div class="table-responsive mt-4">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="table-dark">
+                            <th scope="col">Mã hóa đơn</th>
+                            <th scope="col">Ngày đặt hàng</th>
+                            <th scope="col">Tên người nhận</th>
+                            <th scope="col">Địa chỉ</th>
+                            <th scope="col">Tổng tiền</th>
+                            <th scope="col">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orderTableBody">
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.MaDH</td>
+                                <td>@item.NgayDH?.ToString("dd/MM/yyyy HH:mm")</td>
+                                <td>@item.TenNguoiNhan</td>
+                                <td>@item.DiaChiChiTiet</td>
+                                <td>@String.Format("{0:N0}", item.TongTien) đ</td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a class="btn btn-primary" href="@Url.Action("Detail", "DonHangBanManagement" ,new {id=@item.MaDH})">
+                                           Xem chi tiết
+                                        </a>
+                                       
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Phân trang -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <label for="pageSizeSelect">Số hóa đơn mỗi trang:</label>
+                    <select id="pageSizeSelect" class="form-control" style="width: 150px;margin-bottom:5px">
+                        <option value="10" @(ViewBag.PageSize == 10 ? "selected" : "")>10</option>
+                        <option value="20" @(ViewBag.PageSize == 20 ? "selected" : "")>20</option>
+                        <option value="50" @(ViewBag.PageSize == 50 ? "selected" : "")>50</option>
+                        <option value="100" @(ViewBag.PageSize == 100 ? "selected" : "")>100</option>
+                    </select>
+                </div>
+
+                <div class="pagination-container">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            @if (ViewBag.CurrentPage > 1)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@Url.Action("Index", "DonHangBanManagement", new { pageNumber = 1, pageSize = ViewBag.PageSize })" aria-label="First">
+                                        <span aria-hidden="true">&laquo;&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="@Url.Action("Index", "DonHangBanManagement", new { pageNumber = ViewBag.CurrentPage - 1, pageSize = ViewBag.PageSize })" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                            }
+                            @for (var page = 1; page <= ViewBag.TotalPages; page++)
+                            {
+                                <li class="page-item @(page == ViewBag.CurrentPage ? "active" : "")">
+                                    <a class="page-link" href="@Url.Action("Index", "DonHangBanManagement", new { pageNumber = page, pageSize = ViewBag.PageSize })">@(page)</a>
+                                </li>
+                            }
+                            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="@Url.Action("Index", "DonHangBanManagement", new { pageNumber = ViewBag.CurrentPage + 1, pageSize = ViewBag.PageSize })" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="@Url.Action("Index", "DonHangBanManagement", new { pageNumber = ViewBag.TotalPages, pageSize = ViewBag.PageSize })" aria-label="Last">
+                                        <span aria-hidden="true">&raquo;&raquo;</span>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+       document.getElementById('resetButton').addEventListener('click', function() {
+        let url = new URL(window.location.href);
+
+        // Reset các tham số tìm kiếm
+        url.searchParams.set('searchTerm', "");
+        url.searchParams.set('nameSearch', "");
+        url.searchParams.set('addressSearch', "");
+        url.searchParams.set('startDate', null);
+        url.searchParams.set('endDate', null);
+
+        // Reload trang với các tham số mới
+        window.location.href = url.toString(); // Chuyển hướng đến URL mới với các tham số đã được reset
+    });
+      
+    document.getElementById('searchButton').addEventListener('click', function() {
+        let searchTerm = document.getElementById('searchInput').value;
+        let nameSearch = document.getElementById('nameSearch').value;
+        let addressSearch = document.getElementById('addressSearch').value;
+        let startDate = document.getElementById('startDate').value;
+        let endDate = document.getElementById('endDate').value;
+
+        // Tạo URL với các tham số tìm kiếm
+        let url = new URL(window.location.href);
+        url.searchParams.set('searchTerm', searchTerm);
+        url.searchParams.set('nameSearch', nameSearch);
+        url.searchParams.set('addressSearch', addressSearch);
+        if (startDate) url.searchParams.set('startDate', startDate);
+        if (endDate) url.searchParams.set('endDate', endDate);
+
+        // Chuyển hướng đến URL tìm kiếm
+        window.location.href = url.toString();
+    });
+
+        // Lắng nghe sự thay đổi của select số trang để điều hướng lại
+        document.getElementById('pageSizeSelect').addEventListener('change', function() {
+            let pageSize = this.value;
+            let url = new URL(window.location.href);
+            url.searchParams.set('pageSize', pageSize);
+            window.location.href = url.toString();
+        });
+    
+
+</script>

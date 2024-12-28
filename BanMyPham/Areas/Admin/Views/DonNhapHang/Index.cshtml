@@ -1,0 +1,118 @@
+@model IEnumerable<BanMyPham.Areas.Admin.Controllers.DonNhapHangController.DonNhapHangViewModel>
+@{
+    ViewData["Title"] = "Danh sách đơn nhập hàng";
+    Layout = "~/Views/Shared/_layoutAdmin.cshtml";
+}
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4 class="mb-0 " >Danh sách đơn nhập hàng</h4>
+        <div class="d-flex align-items-center">
+            <div class="input-group me-3">
+                <input type="text" id="searchInput" class="form-control" style="width: 220px;" placeholder="Tìm kiếm đơn nhập hàng...">
+            </div>
+
+            <div class="d-flex align-items-center me-3">
+                <label for="startDate" class="form-label mb-0 me-2">Từ ngày:</label>
+                <input type="date" id="startDate" class="form-control" style="width: 150px;">
+            </div>
+
+            <div class="d-flex align-items-center me-3">
+                <label for="endDate" class="form-label mb-0 me-2">Đến ngày:</label>
+                <input  type="date" id="endDate" class="form-control" style="width: 150px;">
+            </div>
+            <div class="d-flex align-items-center me-3">
+                <a href="@Url.Action("Create", "DonNhapHang", new { area = "Admin" })" class="btn btn-primary" style="width:120px;display:inline-block">
+                    <i class="fas fa-plus"></i> Thêm mới
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Bảng dữ liệu đơn nhập -->
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="table-dark">
+                            <th scope="col">Mã đơn nhập</th>
+                            <th scope="col">Ngày nhập</th>
+                            <th scope="col">Số sản phẩm</th>
+                            <th scope="col">Tổng tiền</th>
+                            <th scope="col">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orderTableBody">
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.MaDN</td>
+                                <td>@item.NgayNhap.ToString("dd/MM/yyyy HH:mm")</td>
+                                <td>@item.SoSanPhamNhap</td>
+                                <td>@String.Format("{0:N0}", item.TongTienNhap) đ</td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a href="@Url.Action("Detail", "DonNhapHang", new { id = item.MaDN, area = "Admin" })"
+                                           class="btn btn-primary btn-sm" style="margin-right: 5px;">
+                                            Chi tiết
+                                        </a>
+                                        <a href="@Url.Action("Cancel", "DonNhapHang", new { id = item.MaDN })"
+                                           class="btn btn-danger btn-sm"
+                                           onclick="return confirm('Bạn có chắc chắn muốn hủy đơn nhập này?');">
+                                           Hủy đơn 
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('searchInput').addEventListener('keyup', function() {
+        let searchText = this.value.toLowerCase();
+        let rows = document.getElementById('orderTableBody').getElementsByTagName('tr');
+
+        for (let row of rows) {
+            let maDN = row.cells[0].textContent.toLowerCase();
+            let ngayNhap = row.cells[1].textContent.toLowerCase();
+
+            if (maDN.includes(searchText) || ngayNhap.includes(searchText)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        }
+    });
+
+    // Tính năng tìm kiếm theo ngày
+    document.getElementById('startDate').addEventListener('change', filterByDate);
+    document.getElementById('endDate').addEventListener('change', filterByDate);
+
+    function filterByDate() {
+        let startDate = document.getElementById('startDate').value;
+        let endDate = document.getElementById('endDate').value;
+        let rows = document.getElementById('orderTableBody').getElementsByTagName('tr');
+
+        for (let row of rows) {
+            let ngayNhapText = row.cells[1].textContent.trim();
+            let ngayNhap = new Date(ngayNhapText.split(" ")[0].split("/").reverse().join("-")); // Chuyển ngày nhập sang kiểu Date
+
+            let showRow = true;
+
+            if (startDate && new Date(startDate) > ngayNhap) {
+                showRow = false;
+            }
+            if (endDate && new Date(endDate) < ngayNhap) {
+                showRow = false;
+            }
+
+            row.style.display = showRow ? '' : 'none';
+        }
+    }
+</script>
